@@ -3,10 +3,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: quarkus-app
-  namespace: openshift-gitops
+  namespace: argocd
 spec:
   destination:
-    namespace: demo
+    namespace: argocd-app
     server: https://kubernetes.default.svc
   project: default
   source:
