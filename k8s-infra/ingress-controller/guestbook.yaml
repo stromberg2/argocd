@@ -4,8 +4,8 @@ metadata:
   name: guestbook-ingress-service
   namespace: guestbook
   annotations: 
-    nginx.ingress.kubernetes.io/ssl-redirect: "false" 
-    nginx.ingress.kubernetes.io/rewrite-target: /static/$2 
+  #  nginx.ingress.kubernetes.io/ssl-redirect: "false" 
+  #  nginx.ingress.kubernetes.io/rewrite-target: /static/$2 
 spec: 
   ingressClassName: nginx 
   rules: 
