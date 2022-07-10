@@ -11,7 +11,7 @@ spec:
   - host: sapp1.gsbonazure.de
     http:
       paths:
-      - path: /
+      - path: /app1
         pathType: Prefix
         backend:
           service:
@@ -22,7 +22,7 @@ spec:
   - host: sapp2.gsbonazure.de
     http:
       paths:
-      - path: /
+      - path: /app2
         pathType: Prefix
         backend:
           service:
