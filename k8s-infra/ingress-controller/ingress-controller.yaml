@@ -22,6 +22,9 @@ spec:
         value: "local"
       - name: "controller.service.loadBalancerIP"
         value: "20.115.6.160"
+      - name: "controller.service.type"
+        value: "ClusterIP"
+      
   destination:
     server: "https://kubernetes.default.svc"
     namespace: ingress-controller
