@@ -12,16 +12,16 @@ spec:
     helm:
       releaseName: ingress-nginx
       parameters:
-      - name: namespace
-        value: ingress-controller
-      - name: controller.replicaCount
-        value: 2
-      - name: controller.nodeSelector."beta\.kubernetes\.io/os"
-        value: linux
-      - name: controller.service.externalTrafficPolicy
-        value: local
-      - name: controller.service.loadBalancerIP
-        value: 20.115.6.160
+      - name: "namespace"
+        value: "ingress-controller"
+      - name: "controller.replicaCount"
+        value: "2"
+      - name: "controller.nodeSelector.beta\.kubernetes\.io/os"
+        value: "linux"
+      - name: "controller.service.externalTrafficPolicy"
+        value: "local"
+      - name: "controller.service.loadBalancerIP"
+        value: "20.115.6.160"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: ingress-controller
