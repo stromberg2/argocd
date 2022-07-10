@@ -4,6 +4,14 @@ metadata:
   name: cert-manager
   namespace: argocd
 spec:
+  # patch for the endless loop ValidatingWebhookConfiguration
+  # https://github.com/cert-manager/cert-manager/issues/4114
+  ignoreDifferences:
+  - group: admissionregistration.k8s.io
+    kind: ValidatingWebhookConfiguration
+    name: cert-manager-webhook
+    jqPathExpressions:
+      - .webhooks[].namespaceSelector.matchExpressions[] | select(.key == "control-plane")
   project: default
   source:
     chart: cert-manager
