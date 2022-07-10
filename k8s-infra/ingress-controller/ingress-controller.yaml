@@ -16,7 +16,7 @@ spec:
         value: "ingress-controller"
       - name: "controller.replicaCount"
         value: "2"
-      - name: "controller.nodeSelector.beta\.kubernetes\.io/os"
+      - name: "controller.nodeSelector.beta"\.kubernetes\.io/os""
         value: "linux"
       - name: "controller.service.externalTrafficPolicy"
         value: "local"
