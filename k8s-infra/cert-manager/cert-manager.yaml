@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager
+  namespace: argocd
+spec:
+  project: default
+  source:
+    chart: cert-manager
+    repoURL: https://charts.jetstack.io
+    targetRevision: 1.8.2
+    helm:
+      releaseName: cert-manager
+      parameters:
+      - name: "--namespace"
+        value: "ingress-controller"
+      - name: "--set installCRDs"
+        value: "true"
+      - name: "--version"
+        value: "v1.8.2"  
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: ingress-controller
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=false
+    
