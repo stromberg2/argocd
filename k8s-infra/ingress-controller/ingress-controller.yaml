@@ -18,12 +18,12 @@ spec:
         value: "2"
 #      - name: "controller.nodeSelector.beta"\.kubernetes\.io/os""
 #        value: "linux"
-#      - name: "controller.service.externalTrafficPolicy"
-#        value: "local"
+      - name: "controller.service.externalTrafficPolicy"
+        value: "local"
       - name: "controller.service.loadBalancerIP"
         value: "20.115.6.160"
       - name: "controller.service.type"
-        value: "ClusterIP" #ClusterIP
+        value: "LoadBalancer" #ClusterIP
       
   destination:
     server: "https://kubernetes.default.svc"
