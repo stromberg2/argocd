@@ -8,7 +8,7 @@ spec:
   source:
     chart: external-dns
   #  repoURL: https://github.com/stromberg2/gitchartrepo
-    repoURL: https://pocaksinfrareg.azurecr.io/helm
+    repoURL: pocaksinfrareg.azurecr.io/helm
     targetRevision: 0.11.0
     helm:
       releaseName: external-dns
