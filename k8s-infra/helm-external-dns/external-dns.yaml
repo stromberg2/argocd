@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    chart: helm/external-dns
+    chart: external-dns
   #  repoURL: https://github.com/stromberg2/gitchartrepo
-    repoURL: https://pocaksinfrareg.azurecr.io 
+    repoURL: https://pocaksinfrareg.azurecr.io/helm
     targetRevision: 0.11.0
     helm:
       releaseName: external-dns
